@@ -1,0 +1,18 @@
+include ../icons/icons
+
+mixin Box(box)
+  .project_box 
+    p(class="project_box_title")= box.title
+      i(class="icon-"+box.icon)
+        +icons(box.icon)
+
+    p(class="project_box_text")= box.text
+
+
+mixin project(data)
+  
+  .project.container#Project
+    img( class="project_image" src=data.img alt=data.img )
+
+    each  box  in data.box
+      +Box(box)

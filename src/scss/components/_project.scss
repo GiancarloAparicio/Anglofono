@@ -1,0 +1,84 @@
+.project{
+	display:grid;
+	grid-template: auto auto auto auto /1fr ;
+	grid-template-areas:" project-1" 
+						" project-2"
+						" project-3"
+						"image";
+
+	grid-row-gap: 10px;
+	grid-column-gap:5px;
+
+	padding:25px 45px;
+	background-color:#474747;
+
+	@media (min-width: 768px) {
+		grid-template: auto auto auto /1fr 1fr;
+		grid-template-areas:"image project-1" 
+							"image project-2"
+							"image project-3";
+	}
+	
+	&_image{
+		grid-area: image;
+	
+		display: block;
+		width: 70%;
+		margin: auto;
+		
+	}
+
+	&_box{
+		display:table;
+		padding:15px 10px;
+		border-radius:8px;
+
+		box-shadow: 0 0 0 hsla(0,0%,100%,.05),
+					0 0 0 rgba(0,0,0,.5),
+					inset -5px -5px 10px hsla(0,0%,100%,.05),
+					inset 5px 5px 15px rgba(0,0,0,.5);
+
+		&_title{
+			color:white;
+			font-size: 1.5em;
+			text-align: center;
+
+			display: block;
+			padding-top:15px;
+			padding-bottom: 10px;
+
+			transition: color .5s;
+
+		}
+
+		&_text{
+			color:lighten(black, 65%);
+
+			display: block;
+			padding:5px 25px;
+
+			transition: color .5s;
+
+		}
+
+		&:hover &_title{
+			color:lighten(#206abe, 10%);
+		}
+
+		&:hover &_text{
+			color:white;
+		}
+	}
+
+
+	@for $i from 1 through 3 {
+  		&_box:nth-child(#{$i}) {
+    		grid-area: project-+$i;
+  		}
+	}
+
+
+}
+
+
+

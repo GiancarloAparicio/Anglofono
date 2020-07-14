@@ -1,0 +1,10 @@
+
+mixin card(card)
+  .card
+    .card-imagen
+      img(class="card-img" src=card.img.url alt=card.img.key)
+    .card-content
+      p(class="card-title")= card.title
+      p(class="card-text")= card.text
+
+

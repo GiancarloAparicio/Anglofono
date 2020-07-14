@@ -1,0 +1,33 @@
+
+
+// Config
+@use "config/functions";
+@use "config/variables";
+@use "config/mixins";
+
+// Base and elements (generic)
+@use "base/base";
+
+// LAYOUT
+  // Escribe solo los estilos de layout (division en regiones del viewport)
+@use "layout/layout";
+
+// MODULOS (SMACSS) O COMPONENTES (ITCSS)
+  // Son los elementos de UI de tu interfaz, como botones, tablas, menus, etc.
+  // Crea los archivos adicionales que necesites (uno por componente)
+@use "./components/_navegacion";
+@use "./components/_slider";
+@use "./components/_section";
+@use "./components/_banner";
+@use "./components/_medium";
+@use "./components/_project";
+@use "./components/_about";
+
+// Theme (colors and fonts)
+@use "theme/typography";
+
+// Utilities (hacks)
+  // Todos los hacks que hayas necesitado para solucionar conflictos
+  // o resolver situaciones extremas. Se espera poder mejorarlos luego.
+@use "hacks/hacks";
+
