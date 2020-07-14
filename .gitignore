@@ -1,6 +1,0 @@
-node_modules/
-.idea/
-
-# Lock files
-*.lock
-package-lock.json
