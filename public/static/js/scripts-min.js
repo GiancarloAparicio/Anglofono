@@ -1,26 +1,2 @@
-(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-"use strict";
-
-var $menuBar = document.querySelector(".menu-bar");
-var $menu = document.querySelector(".menu");
-var $menuItem = document.querySelectorAll(".menu-item");
-
-$menuBar.addEventListener("click", function () {
-  $menuBar.classList.toggle("active");
-  $menu.classList.toggle("active");
-});
-
-$menuItem.forEach(function (Item) {
-  Item.addEventListener("click", function () {
-    $menuBar.click();
-  });
-});
-
-},{}],2:[function(require,module,exports){
-"use strict";
-
-require("./components/_navegacion");
-
-},{"./components/_navegacion":1}]},{},[2]);
-
+!function(){return function e(n,t,r){function o(i,u){if(!t[i]){if(!n[i]){var f="function"==typeof require&&require;if(!u&&f)return f(i,!0);if(c)return c(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var s=t[i]={exports:{}};n[i][0].call(s.exports,function(e){return o(n[i][1][e]||e)},s,s.exports,e,n,t,r)}return t[i].exports}for(var c="function"==typeof require&&require,i=0;i<r.length;i++)o(r[i]);return o}}()({1:[function(e,n,t){"use strict";var r=document.querySelector(".menu-bar"),o=document.querySelector(".menu"),c=document.querySelectorAll(".menu-item");r.addEventListener("click",function(){r.classList.toggle("active"),o.classList.toggle("active")}),c.forEach(function(e){e.addEventListener("click",function(){r.click()})})},{}],2:[function(e,n,t){"use strict";e("./components/_navegacion")},{"./components/_navegacion":1}]},{},[2]);
 //# sourceMappingURL=scripts-min.js.map

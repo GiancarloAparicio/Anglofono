@@ -1,7 +1,7 @@
 {
-  "name": "gulp",
+  "name": "Anglofono",
   "version": "1.0.0",
-  "description": "gulp",
+  "description": "Centro de idiomas",
   "main": "gulpfile.babel.js",
   "homepage": "https://Gulp.com",
   "scripts": {
