@@ -1,14 +1,22 @@
 include ../icons/icons
 
+mixin link(link,iconLink)
+  ul(class="menu-item")
+    i(class="icon-"+iconLink) 
+      +icons(iconLink)
+
+    a( class="menu-link" href=`#${link}`)= link
+
+mixin linkReferences(link,iconLink)
+  ul(class="menu-item")
+    i(class="icon-"+iconLink) 
+      +icons(iconLink)
+      
+    a( class="menu-link" target="__blank" href=`${link.reference}`)= link.link
+
+
 mixin navegacion(navegacion)
-  mixin link(link,iconLink)
-    ul(class="menu-item")
-      i(class="icon-"+iconLink) 
-        +icons(iconLink)
-
-      a( class="menu-link" href=`#${link}`)= link
   
-
   header(class="navegacion")
     h1(class="navegacion-title")= navegacion.title
     div(class="menu-bar")
@@ -16,9 +24,11 @@ mixin navegacion(navegacion)
       div(class="bar-medium")
       div(class="bar-bottom")
     nav(class="menu")
-      - for (var i = 0; i < navegacion.link.length; i++) 
+      - for (let i = 0; i < navegacion.link.length; i++) 
         +link(navegacion.link[i],navegacion.iconLink[i])
 
+      - for (let i = 0; i < navegacion.references.length; i++) 
+        +linkReferences(navegacion.references[i],navegacion.iconReferences[i])
    
   
   
