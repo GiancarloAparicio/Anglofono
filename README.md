@@ -1,7 +1,7 @@
 # Anglofono
 
 Static page for Anglophone academic center, created using Pug, Sass, Babel, Gulp
-[Demo](Enlace)
+[Demo](https://giancarloaparicio.github.io/Anglofono/)
 
 ### Home
 
@@ -10,4 +10,7 @@ Static page for Anglophone academic center, created using Pug, Sass, Babel, Gulp
 ### Responsive
 
 ![Responsive](Photo-2.jpg)
+
+### Navegation
+
 ![Responsive](Photo-3.jpg)
